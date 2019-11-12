@@ -1,0 +1,9 @@
+<nav>
+	<ul style:"display:inline;">
+		<li><button><%= link_to 'All', notes_path %></button></li>
+		<li><button><%= link_to 'New', new_note_path %></button></li>
+	</ul>
+</nav>
+<h1> Notes Home Page </h1>
+<h2> Welcome to Post it Notes <h2>
+<button><%= link_to 'Latest', note_path(Note.last[:id]) %></button>

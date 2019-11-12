@@ -1,7 +1,11 @@
 <nav>
-	<button>	<%= link_to 'New Note', new_note_path %> </button>
+	<ul style:"display:inline;">
+		<li><button><%= link_to 'All', notes_path %></button></li>
+		<li><button><%= link_to 'New', new_note_path %></button></li>
+		<li><button><%= link_to 'Home', new_note_path %></button></li>
+	</ul>
 </nav>
-<h1> Post it Notes </h1>
+<h1> All Notes </h1>
 <% @notes.each do |note| %>
   <h2><%= note.title %></h2>
   <%= link_to 'Show Note', note_path(note) %>
