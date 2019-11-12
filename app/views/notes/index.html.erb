@@ -1,0 +1,8 @@
+<nav>
+	<button>	<%= link_to 'New Note', new_note_path %> </button>
+</nav>
+<h1> Post it Notes </h1>
+<% @notes.each do |note| %>
+  <h2><%= note.title %></h2>
+  <%= link_to 'Show Note', note_path(note) %>
+<% end %>
